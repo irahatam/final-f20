@@ -1,6 +1,17 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", (req, res) => res.send("TESTING BACKEND"));
+const sampleJSON = [
+  {
+    name: "Matahari",
+    role: "Student",
+  },
+  {
+    name: "James",
+    role: "Prof",
+  },
+];
+
+router.get("/", (req, res) => res.send(sampleJSON));
 
 module.exports = router;
