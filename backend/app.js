@@ -3,9 +3,11 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 4000;
 
+// Firebase
+
 const indexRoute = require("./routes/index.js");
 
-// CORS Error
+// Working around CORS Error
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
   res.header(
