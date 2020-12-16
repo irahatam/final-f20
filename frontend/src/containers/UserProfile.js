@@ -26,7 +26,7 @@ function UserProfile() {
   return (
     <div>
       <h1 className="Title">klasses.</h1>
-      <h1> klasses posted by me: </h1>
+      <h1> klasses posted by me </h1>
       <div>
         {userKlassData.map((klass, i) => (
           <KlassCard klassData={klass} key={i} />
