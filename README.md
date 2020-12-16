@@ -8,7 +8,7 @@ With the pandemic happening, everything is happening online. People are doing ev
 
 ## Solution
 
-Klasses is a way for instructors to share their online workout classes to the world
+Klasses is a way for instructors to share their online (live) workout classes to the world. Users are able to view the classes that are happening and also add classes.
 
 ## Users of the site
 
