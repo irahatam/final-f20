@@ -1,4 +1,4 @@
-# Klasses
+# <a href="https://klasses.netlify.app" target="_blank">Klasses</a>
 
 <i> This is a new repo because the old one broke </i>
 
