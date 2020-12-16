@@ -20,7 +20,7 @@ function CreateKlass({ userAuthInfo }) {
       )
       .then(function (response) {
         window.alert("Cool, you've successfully submitted a klass!");
-        history.push();
+        history.push("/");
       })
       .catch(function (error) {
         console.warn("ERROR_CREATING_POST", error);

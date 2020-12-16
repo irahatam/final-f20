@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 import KlassCard from "../components/KlassCard";
 
-function UserProfile({ klassData }) {
+function UserProfile() {
   // FOR SOME REASON THIS DOESN'T WORK
   const [userProfileData, setUserProfileData] = useState({});
   const [userKlassData, setUserKlassData] = useState([]);
@@ -31,7 +31,6 @@ function UserProfile({ klassData }) {
         {userKlassData.map((klass, i) => (
           <KlassCard klassData={klass} key={i} />
         ))}
-        {/* <h3> hello! you are logged in as {klassData.klassUserID}</h3> */}
       </div>
     </div>
   );

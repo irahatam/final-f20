@@ -6,10 +6,13 @@ const firebase = require("firebase");
 const db = firebase.firestore();
 const klasses = db.collection("klasses");
 
-router.get("/all-klasses", (req, res) => {
+router.get("/klasses/:id", (req, res) => {
   const klassesArray = [];
+  // Get ID
+  const queryId = req.params.id;
 
   klasses
+    .where("klassUserID", "==", queryId)
     .get()
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
@@ -23,13 +26,10 @@ router.get("/all-klasses", (req, res) => {
     });
 });
 
-router.get("/klasses/:id", (req, res) => {
+router.get("/all-klasses", (req, res) => {
   const klassesArray = [];
-  // Get ID
-  const queryId = req.params.id;
 
   klasses
-    .where("klassUserID", "==", queryId)
     .get()
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
