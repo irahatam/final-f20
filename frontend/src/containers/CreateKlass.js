@@ -6,12 +6,12 @@ function CreateKlass({ userAuthInfo }) {
   const history = useHistory();
   function submitKlass(e) {
     e.preventDefault();
-    const klassName = e.currentTarget.klassName.value;
-    const klassInstructor = e.currentTarget.klassInstructor.value;
-    const klassDate = e.currentTarget.klassDate.value;
-    const klassTime = e.currentTarget.klassTime.value;
-    const klassLink = e.currentTarget.klassLink.value;
-    const klassDesc = e.currentTarget.klassDesc.value;
+    const klassName = e.target[0].value;
+    const klassInstructor = e.target[1].value;
+    const klassDate = e.target[2].value;
+    const klassTime = e.target[3].value;
+    const klassLink = e.target[4].value;
+    const klassDesc = e.target[5].value;
     const klassUserID = userAuthInfo.uid;
 
     axios
@@ -19,7 +19,8 @@ function CreateKlass({ userAuthInfo }) {
         `https://secret-brushlands-48608.herokuapp.com/create?klassName=${klassName}&klassInstructor=${klassInstructor}&klassDate=${klassDate}&klassTime=${klassTime}&klassLink=${klassLink}&klassDesc=${klassDesc}&klassUserID=${klassUserID}`
       )
       .then(function (response) {
-        window.alert("Cool, you've successfully added a klass!");
+        window.alert("Cool, you've successfully submitted a klass!");
+        history.push();
       })
       .catch(function (error) {
         console.warn("ERROR_CREATING_POST", error);

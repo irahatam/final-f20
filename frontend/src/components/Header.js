@@ -11,7 +11,7 @@ function Header({ loggedIn, LogoutFunction, userAuthInfo }) {
         )}
         {loggedIn && (
           <a href={`/profile/${userAuthInfo.uid}`}>
-            <span class="whenLoggedIn">my profile</span>
+            <span class="whenLoggedIn"> profile</span>
           </a>
         )}
         {loggedIn && (
