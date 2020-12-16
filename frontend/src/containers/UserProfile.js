@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 import KlassCard from "../components/KlassCard";
 
 function UserProfile() {
-  // FOR SOME REASON THIS DOESN'T WORK
   const [userKlassData, setUserKlassData] = useState([]);
   const { id } = useParams();
 
