@@ -5,11 +5,11 @@ function KlassCard({ klassData }) {
     <div className="KlassCard">
       <h3>{klassData.klassName}</h3>
       <p>
-        Instructor:
+        Instructor:&nbsp;
         {klassData.klassInstructor}
       </p>
       <p>
-        Klass Date/Time:
+        Klass Date/Time:&nbsp;
         {klassData.klassDate}, {klassData.klassTime}
       </p>
       <p>Klass Link: {klassData.klassLink}</p>
