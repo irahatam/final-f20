@@ -11,8 +11,8 @@ function UserProfile() {
 
   useEffect(() => {
     axios
-      // .get(`https://secret-brushlands-48608.herokuapp.com/profile/${id}`)
-      .get(`http://localhost:4000/profile/${id}`)
+      .get(`https://secret-brushlands-48608.herokuapp.com/profile/${id}`)
+      // .get(`http://localhost:4000/profile/${id}`)
       .then(function (response) {
         if (response.data) {
           setUserKlassData(response.data);
@@ -27,7 +27,7 @@ function UserProfile() {
     <div>
       <h1 className="Title">klasses.</h1>
       <h1> klasses posted by me: </h1>
-      <div className="ProfileBox">
+      <div>
         {userKlassData.map((klass, i) => (
           <KlassCard klassData={klass} key={i} />
         ))}
