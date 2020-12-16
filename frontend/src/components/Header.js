@@ -14,6 +14,11 @@ function Header({ loggedIn, LogoutFunction, userAuthInfo }) {
             <span class="whenLoggedIn">my profile</span>
           </a>
         )}
+        {loggedIn && (
+          <a href="/create-klass">
+            <span class="whenLoggedIn">submit a klass!</span>
+          </a>
+        )}
         {!loggedIn && (
           <a href="/create-account">
             <span class="whenLoggedIn">sign up</span>

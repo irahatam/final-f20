@@ -3,7 +3,6 @@ import React from "react";
 function KlassCard({ klassData }) {
   return (
     <div className="KlassCard">
-      <p>Klass ID: {klassData.klassID}</p>
       <p>Klass Name: {klassData.klassName}</p>
       <p>
         Klass Instructor:&nbsp;

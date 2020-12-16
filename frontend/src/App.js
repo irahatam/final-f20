@@ -9,6 +9,7 @@ import CreateAccount from "./containers/CreateAccount";
 import Header from "./components/Header";
 import Home from "./containers/Home";
 import Login from "./containers/Login";
+import CreateKlass from "./containers/CreateKlass";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -125,6 +126,14 @@ function App() {
             <CreateAccount CreateAccountFunction={CreateAccountFunction} />
           ) : (
             <Redirect to="/" />
+          )}
+        </Route>
+
+        <Route exact path="/create-klass">
+          {!loggedIn ? (
+            <Redirect to="/login" />
+          ) : (
+            <CreateKlass userAuthInfo={userAuthInfo} />
           )}
         </Route>
 

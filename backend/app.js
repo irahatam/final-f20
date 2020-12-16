@@ -13,10 +13,11 @@ const firebaseConfig = {
   messagingSenderId: "663769538851",
   appId: "1:663769538851:web:0d889e50389ea7c3446c96",
 };
-
 firebase.initializeApp(firebaseConfig);
 
+// import routes
 const indexRoute = require("./routes/index.js");
+const createKlass = require("./routes/index.js");
 
 // Working around CORS Error
 app.use(function (req, res, next) {
@@ -30,5 +31,6 @@ app.use(function (req, res, next) {
 
 // Routes
 app.use("/", indexRoute);
+app.use("/create", createKlass);
 
 app.listen(port, () => console.log(`Backend is running at port:${port}`));
