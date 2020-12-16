@@ -1,7 +1,9 @@
 import React from "react";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 function CreateKlass({ userAuthInfo }) {
+  const history = useHistory();
   function submitKlass(e) {
     e.preventDefault();
     const klassName = e.currentTarget.klassName.value;
@@ -17,7 +19,7 @@ function CreateKlass({ userAuthInfo }) {
         `https://secret-brushlands-48608.herokuapp.com/create?klassName=${klassName}&klassInstructor=${klassInstructor}&klassDate=${klassDate}&klassTime=${klassTime}&klassLink=${klassLink}&klassDesc=${klassDesc}&klassUserID=${klassUserID}`
       )
       .then(function (response) {
-        console.log({ SUCCESS: response });
+        window.alert("Cool, you've successfully added a klass!");
       })
       .catch(function (error) {
         console.warn("ERROR_CREATING_POST", error);

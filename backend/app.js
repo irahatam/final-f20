@@ -30,7 +30,50 @@ app.use(function (req, res, next) {
 });
 
 // Routes
-app.use("/", indexRoute);
-app.use("/create", createKlass);
+// app.get("/", ()=>{router.index});
+// app.get("/create", ()=>{router.index});
+
+const router = express.Router();
+
+// Require Firebase
+const db = firebase.firestore();
+const klasses = db.collection("klasses");
+
+router.get("/all-klasses", (req, res) => {
+  const klassesArray = [];
+
+  klasses
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        klassesArray.push(doc.data());
+      });
+      return res.send(klassesArray);
+    })
+    .catch(function (error) {
+      return res.send(error);
+    });
+});
+
+router.get("/create", (req, res) => {
+  const queryParams = req.query;
+
+  klasses
+    .doc()
+    .set(queryParams)
+    .then(function (doc) {
+      res.send("Success!");
+    })
+    .catch(function (e) {
+      res.send([{ ERROR_SUBMITTING: e.toString() }]);
+    });
+});
+
+app.get("/people", function (req, res) {
+  console.log();
+  res.send("hello");
+});
+
+app.use("/", router);
 
 app.listen(port, () => console.log(`Backend is running at port:${port}`));
