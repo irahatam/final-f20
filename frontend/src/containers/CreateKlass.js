@@ -28,7 +28,8 @@ function CreateKlass({ userAuthInfo }) {
   }
   return (
     <div>
-      <h1>Submit a Klass!</h1>
+      <h1 className="Title">klasses.</h1>
+      <h1>submit a klass</h1>
       <form onSubmit={(e) => submitKlass(e)}>
         <label>
           Klass Name

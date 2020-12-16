@@ -24,6 +24,7 @@ function UserProfile({}) {
 
   return (
     <div>
+      <h1 className="Title">klasses.</h1>
       <h1> profile </h1>
       <h2>My submissions:</h2>
       {userKlassData.map((klass, i) => (

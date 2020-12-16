@@ -20,7 +20,8 @@ function Home() {
 
   return (
     <div>
-      <h2>klasses list</h2>
+      <h1 className="Title">klasses.</h1>
+      <h1>klasses list</h1>
       {klassAPIData.map((klass, i) => (
         <KlassCard klassData={klass} key={i} />
       ))}
