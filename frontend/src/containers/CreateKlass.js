@@ -20,7 +20,7 @@ function CreateKlass({ userAuthInfo }) {
         console.log({ SUCCESS: response });
       })
       .catch(function (error) {
-        console.log("ERROR_CREATING_POST", error);
+        console.warn("ERROR_CREATING_POST", error);
       });
   }
   return (

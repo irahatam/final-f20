@@ -18,7 +18,7 @@ router.get("/all-klasses", (req, res) => {
       return res.send(klassesArray);
     })
     .catch(function (error) {
-      console.log("Error:", error);
+      console.warn("Error:", error);
       return res.send(error);
     });
 });
@@ -38,7 +38,7 @@ router.get("/klasses/:id", (req, res) => {
       return res.send(klassesArray);
     })
     .catch(function (error) {
-      console.log("Error:", error);
+      console.warn("Error:", error);
       return res.send(error);
     });
 });
