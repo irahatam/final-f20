@@ -6,7 +6,7 @@ const firebase = require("firebase");
 const db = firebase.firestore();
 const klasses = db.collection("klasses");
 
-router.get("/klasses/:id", (req, res) => {
+router.get("/profile/:id", (req, res) => {
   const klassesArray = [];
   // Get ID
   const queryId = req.params.id;
