@@ -11,7 +11,7 @@ function UserProfile({}) {
 
   useEffect(() => {
     axios
-      .get(`localhost:4000/klasses/${id}`)
+      .get(`https://secret-brushlands-48608.herokuapp.com/klasses/${id}`)
       .then(function (response) {
         if (response.data) {
           setUserKlassData(response.data);

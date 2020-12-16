@@ -14,7 +14,7 @@ function CreateKlass({ userAuthInfo }) {
 
     axios
       .get(
-        `http://localhost:4000/create?klassName=${klassName}&klassInstructor=${klassInstructor}&klassDate=${klassDate}&klassTime=${klassTime}&klassLink=${klassLink}&klassDesc=${klassDesc}&klassUserID=${klassUserID}`
+        `https://secret-brushlands-48608.herokuapp.com/create?klassName=${klassName}&klassInstructor=${klassInstructor}&klassDate=${klassDate}&klassTime=${klassTime}&klassLink=${klassLink}&klassDesc=${klassDesc}&klassUserID=${klassUserID}`
       )
       .then(function (response) {
         console.log({ SUCCESS: response });
