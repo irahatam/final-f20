@@ -4,18 +4,18 @@
 }
 
 body {
-  background-color: #304b01;
+  background-color: #e0bef2;
 }
 
 .App {
   max-width: 1080px;
   margin: 0 auto;
   padding: 10px 20px;
-  color: #fffdff;
+  color: black;
 }
 
 .Header nav a {
-  color: #fffdff;
+  color: black;
   font-size: 22px;
   margin: 0 10px;
   text-decoration: none;
@@ -48,8 +48,8 @@ button {
   border-radius: 8px;
   width: 17%;
   padding: 16px;
-  color: #304b01;
-  background-color: #fffdff;
+  color: #e0bef2;
+  background-color: black;
 }
 
 button:hover {
@@ -59,7 +59,7 @@ button:hover {
 .upload:hover,
 .ClassesCard:hover,
 .OtherNav:hover {
-  background-color: #fffdff;
+  background-color: black;
 }
 
 .Listing {
@@ -105,7 +105,7 @@ div.container {
 }
 
 .KlassCard {
-  margin: 2vh;
+  margin: 5vh;
   box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px,
     rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px,
     rgb(255, 85, 85) 0px 0px 0px 15px;
@@ -116,12 +116,14 @@ div.container {
 .ProfileBox {
   padding: 2%;
   border-radius: 10px;
-  box-shadow: white 0px 1px 4px, white 0px 0px 0px 3px;
+  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px,
+    rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px,
+    rgb(255, 85, 85) 0px 0px 0px 15px;
 }
 
 .whenLoggedIn {
   width: 11%;
-  color: #fffdff;
+  color: black;
   padding: 0.5%;
 }
 
@@ -130,7 +132,7 @@ div.container {
 }
 
 a {
-  color: #fffdff;
+  color: black;
 }
 
 h4 {

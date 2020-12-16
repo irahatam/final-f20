@@ -2,6 +2,10 @@
 
 <i> This is a new repo because the old one broke </i>
 
+## How to use
+
+Sign in or create an account to look through or post klasses!
+
 ## Current problem
 
 With the pandemic happening, everything is happening online. People are doing everything from their houses and often feel burnt out.

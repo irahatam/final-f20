@@ -6,7 +6,6 @@ import KlassCard from "../components/KlassCard";
 
 function UserProfile() {
   // FOR SOME REASON THIS DOESN'T WORK
-  const [userProfileData, setUserProfileData] = useState({});
   const [userKlassData, setUserKlassData] = useState([]);
   const { id } = useParams();
 
@@ -26,7 +25,7 @@ function UserProfile() {
   return (
     <div>
       <h1 className="Title">klasses.</h1>
-      <h1> my profile </h1>
+      <h1> klasses posted by me: </h1>
       <div className="ProfileBox">
         {userKlassData.map((klass, i) => (
           <KlassCard klassData={klass} key={i} />
