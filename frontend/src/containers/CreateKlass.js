@@ -4,19 +4,12 @@ import axios from "axios";
 function CreateKlass({ userAuthInfo }) {
   function submitKlass(e) {
     e.preventDefault();
-    // const klassName = e.currentTarget.klassName.value;
-    // const klassInstructor = e.currentTarget.klassInstructor.value;
-    // const klassDate = e.currentTarget.klassDate.value;
-    // const klassTime = e.currentTarget.klassTime.value;
-    // const klassLink = e.currentTarget.klassLink.value;
-    // const klassDesc = e.currentTarget.klassDesc.value;
-
-    const klassName = e.currentTarget.klassName;
-    const klassInstructor = e.currentTarget.klassInstructor;
-    const klassDate = e.currentTarget.klassDate;
-    const klassTime = e.currentTarget.klassTime;
-    const klassLink = e.currentTarget.klassLink;
-    const klassDesc = e.currentTarget.klassDesc;
+    const klassName = e.currentTarget.klassName.value;
+    const klassInstructor = e.currentTarget.klassInstructor.value;
+    const klassDate = e.currentTarget.klassDate.value;
+    const klassTime = e.currentTarget.klassTime.value;
+    const klassLink = e.currentTarget.klassLink.value;
+    const klassDesc = e.currentTarget.klassDesc.value;
     const klassUserID = userAuthInfo.uid;
 
     axios

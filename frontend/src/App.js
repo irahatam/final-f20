@@ -10,6 +10,7 @@ import Header from "./components/Header";
 import Home from "./containers/Home";
 import Login from "./containers/Login";
 import CreateKlass from "./containers/CreateKlass";
+import UserProfile from "./containers/UserProfile";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -108,7 +109,11 @@ function App() {
 
   return (
     <div className="App">
-      <Header loggedIn={loggedIn} LogoutFunction={LogoutFunction} />
+      <Header
+        loggedIn={loggedIn}
+        LogoutFunction={LogoutFunction}
+        userAuthInfo={userAuthInfo}
+      />
       <Router>
         <Route exact path="/login">
           {/* if someone is logged in, do not take them to login page 
@@ -137,13 +142,9 @@ function App() {
           )}
         </Route>
 
-        {/* <Route exact path="/klass/:id">
-          {!loggedIn ? (
-            <Redirect to="/login" />
-          ) : (
-            <Klass userAuthInfo={userAuthInfo} />
-          )}
-        </Route> */}
+        <Route exact path="/profile/:id">
+          {!loggedIn ? <Redirect to="/login" /> : <UserProfile />}
+        </Route>
 
         <Route exact path="/">
           {!loggedIn ? (

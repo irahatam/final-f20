@@ -10,7 +10,7 @@ function Header({ loggedIn, LogoutFunction, userAuthInfo }) {
           </a>
         )}
         {loggedIn && (
-          <a href={"/"}>
+          <a href={`/profile/${userAuthInfo.uid}`}>
             <span class="whenLoggedIn">my profile</span>
           </a>
         )}
