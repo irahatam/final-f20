@@ -1,18 +1,25 @@
 const express = require("express");
 const router = express.Router();
 
-const sampleKlassJSON = [
-  {
-    klassName: "Zumba",
-    klassInstructor: "Matahari",
-    klassID: "01",
-    klassInstructorID: "001",
-    klassDate: "Friday, Nov 25, 2020",
-    klassTime: "5 PM EST",
-    klassLink: "https://zoom.us",
-  },
-];
+// Require Firebase
+const firebase = require("firebase");
+const db = firebase.firestore();
+const klasses = db.collection("klasses");
 
-router.get("/", (req, res) => res.send(sampleKlassJSON));
+router.get("/all-klasses", (req, res) => {
+  const klassesArray = [];
 
+  klasses
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        klassesArray.push(doc.data());
+      });
+      return res.send(klassesArray);
+    })
+    .catch(function (error) {
+      console.log("Error:", error);
+      return res.send(error);
+    });
+});
 module.exports = router;

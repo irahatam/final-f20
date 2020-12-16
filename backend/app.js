@@ -3,7 +3,18 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 4000;
 
-// Firebase
+// Initializing Firebase
+const firebase = require("firebase");
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_FIREBASE_API,
+  authDomain: "final-f20.firebaseapp.com",
+  projectId: "final-f20",
+  storageBucket: "final-f20.appspot.com",
+  messagingSenderId: "663769538851",
+  appId: "1:663769538851:web:0d889e50389ea7c3446c96",
+};
+
+firebase.initializeApp(firebaseConfig);
 
 const indexRoute = require("./routes/index.js");
 

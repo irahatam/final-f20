@@ -6,11 +6,11 @@ function Header({ loggedIn, LogoutFunction, userAuthInfo }) {
       <nav className="Header nav">
         {loggedIn && (
           <a href="/">
-            <span class="whenLoggedIn">classes</span>
+            <span class="whenLoggedIn">klasses</span>
           </a>
         )}
         {loggedIn && (
-          <a href={`/profile/${userAuthInfo.uid}`}>
+          <a href={"/"}>
             <span class="whenLoggedIn">my profile</span>
           </a>
         )}
