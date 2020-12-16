@@ -12,7 +12,12 @@ function KlassCard({ klassData }) {
         Klass Date/Time:&nbsp;
         {klassData.klassDate}, {klassData.klassTime}
       </p>
-      <p>Klass Link: {klassData.klassLink}</p>
+      <p>
+        Klass Link:{" "}
+        <a target="_blank" href={`${klassData.klassLink}`}>
+          {klassData.klassLink}
+        </a>
+      </p>
       <p>Klass Description: {klassData.klassDesc}</p>
     </div>
   );
