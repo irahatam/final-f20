@@ -99,6 +99,7 @@ function App() {
         setLoggedIn(true);
       })
       .catch(function (error) {
+        window.alert("Your password has to be 8 characters or more.");
         console.warn("ACCOUNT CREATION FAILED", error);
       });
   }
