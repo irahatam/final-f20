@@ -29,7 +29,7 @@ router.get("/klasses/:id", (req, res) => {
   const queryId = req.params.id;
 
   klasses
-    .where("klassUserID", "==", true)
+    .where("klassUserID", "==", queryId)
     .get()
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {

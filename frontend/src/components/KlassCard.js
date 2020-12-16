@@ -3,15 +3,15 @@ import React from "react";
 function KlassCard({ klassData }) {
   return (
     <div className="KlassCard">
-      <p>Klass Name: {klassData.klassName}</p>
+      <h3>{klassData.klassName}</h3>
       <p>
-        Klass Instructor:&nbsp;
-        <a href={`/user/${klassData.klassInstructorID}`}>
-          {klassData.klassInstructor}
-        </a>
+        Instructor: <br></br>
+        {klassData.klassInstructor}
       </p>
-      <p>Klass Date: {klassData.klassDate}</p>
-      <p>Klass Time: {klassData.klassTime}</p>
+      <p>
+        Klass Date/Time: <br></br>
+        {klassData.klassDate}, {klassData.klassTime}
+      </p>
       <p>Klass Link: {klassData.klassLink}</p>
       <p>Klass Description: {klassData.klassDesc}</p>
     </div>
