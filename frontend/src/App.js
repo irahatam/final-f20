@@ -66,7 +66,7 @@ function App() {
         setLoggedIn(true);
       })
       .catch(function (error) {
-        window.alert(":(", error);
+        window.alert("Oops, you don't have an account yet!", error);
       });
   }
 
