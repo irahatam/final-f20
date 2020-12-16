@@ -46,7 +46,8 @@ body {
 button {
   border: 0px;
   border-radius: 8px;
-  width: 17%;
+  width: 100%;
+  margin-top: 5vh;
   padding: 16px;
   color: #e0bef2;
   background-color: black;
@@ -141,4 +142,24 @@ h4 {
 
 h3 {
   font-size: 1.5em;
+}
+
+@media screen and (max-width: 640px) {
+  .Header {
+    flex-direction: column;
+  }
+  .Header nav a {
+    font-size: 16px;
+  }
+  .Header nav {
+    padding-top: 3em;
+  }
+  button {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .Img {
+    padding-top: 4vh;
+    width: 80%;
+  }
 }

@@ -11,10 +11,12 @@ function UserProfile() {
 
   useEffect(() => {
     axios
-      .get(`https://secret-brushlands-48608.herokuapp.com/klasses/${id}`)
-      // .get(`http://localhost:4000/klasses/${id}`)
+      // .get(`https://secret-brushlands-48608.herokuapp.com/profile/${id}`)
+      .get(`http://localhost:4000/profile/${id}`)
       .then(function (response) {
-        setUserKlassData(response.data);
+        if (response.data) {
+          setUserKlassData(response.data);
+        }
       })
       .catch(function (error) {
         console.warn("error", error);
@@ -25,11 +27,11 @@ function UserProfile() {
     <div>
       <h1 className="Title">klasses.</h1>
       <h1> klasses posted by me: </h1>
-      {userKlassData.map((klass, i) => (
-        <div className="ProfileBox">
+      <div className="ProfileBox">
+        {userKlassData.map((klass, i) => (
           <KlassCard klassData={klass} key={i} />
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
