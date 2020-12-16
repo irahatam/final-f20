@@ -8,12 +8,12 @@ Sign in or create an account to look through or post klasses!
 
 ## Current problem
 
-With the pandemic happening, everything is happening online. People are doing everything from their houses and often feel burnt out.
+With the pandemic happening, everything is happening online. People are bored and trying to find a new hobby/activity to do
 
 ## Solution
 
-Klasses is a way for instructors to share their online (live) workout classes to the world. Users are able to view the classes that are happening and also add classes.
+Klasses is a way for users to share their online (live) klasses to the world and find their new favorit activities. Users are able to search through the website and also post their own klasses.
 
 ## Users of the site
 
-Klasses will be used by instructors and people who are interested in joining their classes.
+Klasses will be used by instructors and people who are interested in joining their klasses.

@@ -35,11 +35,26 @@ router.get("/all-klasses", (req, res) => {
       querySnapshot.forEach((doc) => {
         klassesArray.push(doc.data());
       });
+      console.log("sucess load all klasses");
       return res.send(klassesArray);
     })
     .catch(function (error) {
-      console.warn("Error:", error);
       return res.send(error);
+    });
+});
+
+router.get("/create", (req, res) => {
+  const queryParams = req.query;
+
+  klasses
+    .doc()
+    .set(queryParams)
+    .then(function (doc) {
+      console.log("sucess create");
+      res.send("Success!");
+    })
+    .catch(function (e) {
+      res.send([{ ERROR_SUBMITTING: e.toString() }]);
     });
 });
 
