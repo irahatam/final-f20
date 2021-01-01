@@ -1,8 +1,10 @@
 import React from "react";
 
+import Footer from "../components/Footer";
+
 function LoginForm({ LoginFunction }) {
   return (
-    <div>
+    <div className="pl-12 pr-12 BgC">
       <form className="SignupForm" onSubmit={(e) => LoginFunction(e)}>
         <label htmlFor="loginEmail">Email</label>
         <input type="email" name="loginEmail" />
@@ -12,6 +14,7 @@ function LoginForm({ LoginFunction }) {
 
         <button>Submit</button>
       </form>
+      <Footer />
     </div>
   );
 }

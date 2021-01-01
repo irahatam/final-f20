@@ -3,9 +3,9 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 import KlassCard from "../components/KlassCard";
+import Footer from "../components/Footer";
 
 function UserProfile() {
-  // FOR SOME REASON THIS DOESN'T WORK
   const [userKlassData, setUserKlassData] = useState([]);
   const { id } = useParams();
 
@@ -24,14 +24,14 @@ function UserProfile() {
   }, []);
 
   return (
-    <div>
-      <h1 className="Title">klasses.</h1>
-      <h1> klasses posted by me </h1>
+    <div className="pl-12 pr-12 BgC">
+      <h1 className="Title">Posted by Me</h1>
       <div>
         {userKlassData.map((klass, i) => (
           <KlassCard klassData={klass} key={i} />
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

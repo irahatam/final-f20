@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import KlassCard from "../components/KlassCard";
+import Footer from "../components/Footer";
 
 function Home() {
   const [klassAPIData, setKlassAPIData] = useState([]);
@@ -19,26 +20,12 @@ function Home() {
   }, []);
 
   return (
-    <div>
-      <h1 className="Title">klasses.</h1>
-      <div className="Home">
-        <h1>klasses list</h1>
-        <i>
-          Convert to your timezone{" "}
-          <a
-            href="https://www.timeanddate.com/worldclock/converter.html"
-            target="_blank"
-          >
-            here
-          </a>
-          <br></br>
-          Note: Our server is sometimes slow, if the klasses don't show up,
-          please try to refresh or try adding a klass!
-        </i>
-      </div>
+    <div className="pl-12 pr-12 BgC">
+      <h1 className="Title">Klasses</h1>
       {klassAPIData.map((klass, i) => (
         <KlassCard klassData={klass} key={i} />
       ))}
+      <Footer />
     </div>
   );
 }

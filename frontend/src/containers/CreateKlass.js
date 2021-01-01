@@ -2,6 +2,8 @@ import React from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 
+import Footer from "../components/Footer";
+
 function CreateKlass({ userAuthInfo }) {
   const history = useHistory();
   function submitKlass(e) {
@@ -27,9 +29,8 @@ function CreateKlass({ userAuthInfo }) {
       });
   }
   return (
-    <div>
-      <h1 className="Title">klasses.</h1>
-      <h1>submit a klass</h1>
+    <div className="pl-12 pr-12 BgC">
+      <h1 className="Title">Submit a Klass</h1>
       <form onSubmit={(e) => submitKlass(e)}>
         <label>
           Klass Name
@@ -57,6 +58,7 @@ function CreateKlass({ userAuthInfo }) {
         </label>
         <button type="submit">Submit Klass!</button>
       </form>
+      <Footer />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 function KlassCard({ klassData }) {
   return (
-    <div className="KlassCard">
+    <div className="shadow-md p-10 mt-7 rounded-md Card">
       <h3>{klassData.klassName}</h3>
       <p>
         Instructor:&nbsp;

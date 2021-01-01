@@ -1,29 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAaCAMAAABigZc2AAAACVBMVEX///8AAAD///9+749PAAAAAXRSTlMAQObYZgAAAFpJREFUeNp9jUEOwEAIAhn+/+imjbs1bC0XzQioSUAAYZs0mcVY051RbGXfFsyxibTVHXhuhXYlbuRGPbe7kz3g0wf679OuizDBdCaberLE4AsjGliD02eNugA+MQFAPqynHQAAAABJRU5ErkJggg==),
     auto;
 }
 
-body {
-  background-color: #e0bef2;
-}
-
 .App {
-  max-width: 1080px;
   margin: 0 auto;
-  padding: 10px 20px;
-  color: black;
 }
 
-.Header nav a {
-  color: black;
-  font-size: 22px;
-  margin: 0 10px;
-  text-decoration: none;
+.BgC {
+  background-color: #171717;
 }
 
-.Header nav a:hover {
-  font-weight: bold;
-  transition: 0.3s;
+.Card {
+  background-color: #2e2e2e;
 }
 
 .SignupForm {
@@ -67,12 +60,6 @@ button:hover {
   width: 20%;
 }
 
-/* form {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-} */
-
 input[type="text"],
 select {
   width: 40%;
@@ -89,27 +76,8 @@ div.container {
   padding: 20px;
 }
 
-.KlassCard {
-  margin: 5vh;
-  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px,
-    rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px,
-    rgb(255, 85, 85) 0px 0px 0px 15px;
-  padding: 3%;
-  border-radius: 10px;
-}
-
-.whenLoggedIn {
-  width: 11%;
-  color: black;
-  padding: 0.5%;
-}
-
 .Home {
   padding-bottom: 3%;
-}
-
-a {
-  color: black;
 }
 
 h4 {
