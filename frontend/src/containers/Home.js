@@ -31,6 +31,9 @@ function Home() {
           >
             here
           </a>
+          <br></br>
+          Note: Our server is sometimes slow, if the klasses don't show up,
+          please try to refresh or try adding a klass!
         </i>
       </div>
       {klassAPIData.map((klass, i) => (
